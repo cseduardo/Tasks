@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
 namespace Tasks
 {
-    public partial class MainPage : ContentPage
+    public static class AzureConnection
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        public static string AzureURL = @"https://tasks-t.azurewebsites.net";
     }
 }

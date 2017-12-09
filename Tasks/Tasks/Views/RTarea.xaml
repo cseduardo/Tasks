@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tasks.Views.RTarea"
+             Title="Nueva Tarea">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Text="Titulo" Grid.Column="0" Grid.Row="0"></Label>
+                <Entry x:Name="titulo" Grid.Column="1" Grid.Row="0"></Entry>
+                <Label Text="Descripcion" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"></Label>
+                <Editor x:Name="descripcion" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"></Editor>
+                <Label Text="Asignar a:" Grid.Column="0" Grid.Row="3"></Label>
+                <Picker Grid.Column="1" Grid.Row="3"></Picker>
+                <Label Text="prioridad" Grid.Column="0" Grid.Row="4"></Label>
+                <Picker x:Name="Prioridad" Title="Prioridad" Grid.Column="1" Grid.Row="4" BackgroundColor="White">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Baja</x:String>
+                            <x:String>Media</x:String>
+                            <x:String>Alta</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="Fecha de estrega" Grid.Column="0" Grid.Row="5"></Label>
+                <DatePicker x:Name="f_entrega" Grid.Column="1" Grid.Row="5">
+                    <DatePicker.MaximumDate>
+                        12/31/2022
+                    </DatePicker.MaximumDate>
+                    <DatePicker.MinimumDate>
+                        12/04/2017
+                    </DatePicker.MinimumDate>
+                </DatePicker>
+                <Label Text="Depende de" Grid.Column="0" Grid.Row="6"></Label>
+                <Picker x:Name="d_tarea" Grid.Column="1" Grid.Row="6"></Picker>
+                <Label Text="Status" Grid.Column="0" Grid.Row="7"></Label>
+                <Picker x:Name="status_s" Title="Prioridad" Grid.Column="1" Grid.Row="7" BackgroundColor="White">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Creada</x:String>
+                            <x:String>En ejecucion</x:String>
+                            <x:String>Completada</x:String>
+                            <x:String>No Completada</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button x:Name="registrar" Text="Aceptar" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="2" Clicked="registrar_Clicked"></Button>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tasks.Views.VTareas"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="add"
+                     Text="Agregar Tarea"
+                     Icon="anadir.png"
+                     Order="Secondary"
+                     Clicked="Agregar_Clicked"/>
+        <ToolbarItem x:Name="usuarios"
+                     Text="Modificar Usuarios"
+                     Order="Secondary"
+                     Clicked="usuarios_Clicked"/>
+        <ToolbarItem x:Name="salir"
+                     Text="Cerrar Sesión"
+                     Order="Secondary"
+                     Clicked="salir_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Switch x:Name="mtodo" IsToggled="False" Grid.Column="0"></Switch>
+                    <Label Text="Mostrar eliminados" Grid.Column="1" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+                </Grid>
+                <SearchBar x:Name="buscarRSB"
+                       TextChanged="buscarRegistrosSB_TextChanged"
+                       BackgroundColor="White"
+                       Placeholder="BUSQUEDA POR APELLIDO">
+                </SearchBar>
+                <ActivityIndicator HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False"
+                       IsEnabled="True"
+                       x:Name="syncIndicator"/>
+                <ListView x:Name="registrosLV"
+                      ItemsSource="{Binding items}"
+                      CachingStrategy="RecycleElement"
+                      ItemSelected="registrosLV_ItemSelected"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="True"
+                      Refreshing="registrosLV_Refreshing">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Tarea:" Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="LightYellow" />
+                                    <Label x:Name="identificador" Text="{Binding Matricula}" Grid.Column="0" Grid.Row="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                                    <Label Text="Nombre Completo" Grid.Column="1" Grid.Row="0" TextColor="LightYellow"/>
+                                    <Grid Grid.Column="1" Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label x:Name="nom" Text="{Binding Nombre}" Grid.Column="0" TextColor="White"></Label>
+                                        <Label Text="{Binding Ape_Pat}" Grid.Column="1" TextColor="White"></Label>
+                                        <Label Text="{Binding Ape_Mat}" Grid.Column="2" TextColor="White"></Label>
+                                    </Grid>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

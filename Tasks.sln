@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks.Android", "Tasks\Tasks.Android\Tasks.Android.csproj", "{D5B55C40-DFF5-47C1-9059-BA0B22840546}"
 EndProject
@@ -204,9 +204,9 @@ Global
 		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x64.ActiveCfg = Debug|x64
 		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x64.Build.0 = Debug|x64
 		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x64.Deploy.0 = Debug|x64
-		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x86.ActiveCfg = Debug|x86
-		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x86.Build.0 = Debug|x86
-		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x86.Deploy.0 = Debug|x86
+		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x86.ActiveCfg = Debug|x64
+		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x86.Build.0 = Debug|x64
+		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Debug|x86.Deploy.0 = Debug|x64
 		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Release|Any CPU.ActiveCfg = Release|x86
 		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Release|ARM.ActiveCfg = Release|ARM
 		{F8AB3399-9BD2-49F5-B10B-B5D2D0C12152}.Release|ARM.Build.0 = Release|ARM
@@ -242,7 +242,9 @@ Global
 		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Debug|x64.ActiveCfg = Debug|iPhone
+		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Debug|x64.Build.0 = Debug|iPhone
 		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Debug|x86.ActiveCfg = Debug|iPhone
+		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Debug|x86.Build.0 = Debug|iPhone
 		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
 		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Release|ARM.ActiveCfg = Release|iPhone
 		{5B121165-41A7-4194-8AEE-F4BEDEB5527C}.Release|iPhone.ActiveCfg = Release|iPhone

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,17 @@ namespace Tasks
 {
     public partial class App : Application
     {
+        public static ISQLAzure Authenticator { get; private set; }
+        public static void Init(ISQLAzure authenticator)
+        {
+            Authenticator = authenticator;
+        }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new Tasks.MainPage();
+            MainPage = new NavigationPage(new Views.Inicio());
         }
 
         protected override void OnStart()

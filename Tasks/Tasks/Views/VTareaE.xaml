@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tasks.Views.VTareaE"
+             Title="Tarea">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Titulo Tarea" FontSize="Medium" HorizontalOptions="CenterAndExpand"></Label>
+            <Entry x:Name="tarea" HorizontalOptions="CenterAndExpand"></Entry>
+            <Label Text="Descripcion" FontSize="Medium" HorizontalOptions="CenterAndExpand"></Label>
+            <Editor x:Name="descripcion" HorizontalOptions="CenterAndExpand"></Editor>
+            <Label Text="Persona Asignada" FontSize="Medium" IsVisible="False" HorizontalOptions="CenterAndExpand"></Label>
+            <Picker x:Name="asignada" IsVisible="False" IsEnabled="False" HorizontalOptions="CenterAndExpand"></Picker>
+            <Label Text="prioridad" HorizontalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
